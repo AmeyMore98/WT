@@ -1,11 +1,46 @@
 <html>
-<head></head>
-<body>
-<center><h3>Register</h3>
-<input id="name" placeholder="Enter Name"><br><br>
-<input id="email" placeholder="Enter Email"><br><br>
-<input placeholder="Enter Password"><br><br>
-<input id="password" placeholder="Confirm Password"><br><br>
-<input type="Submit" value="Register"></center>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width-device-width, intial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+		<script src="reg-form-validation.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>E-Book Store</title>
+	</head>
+<body onload="document.registration.username.focus();">
+	<div class="wrapper">
+		<!--Navigation-->
+		<div class="header">
+			Suyogon
+		</div>
+		<nav class="main-nav">
+			<ul>
+				<li><a href="index.html" target="a">Home</a></li>
+				<li><a href="cat.html" target="a">Catalog</a></li>
+				<li><a href="profile.html" target="a">Profile</a></li>
+				<li><a href="cart.html" target="a">Cart</a></li>
+				<li><a href="login.html" target="a">Login</a></li>
+				<li><a href="reg.html" target="a">Register</a></li>
+			</ul>
+		</nav>
+	    <div class="content">
+			<center>
+				<i class="fas fa-user-plus fa-4x"></i>
+				<h1>Register</h1>
+				<form name='registration' onSubmit="return formValidation();">
+					<input type="text" name="username" placeholder="Name" /><br><br>
+					<input type="password" name="pass" placeholder="Password" /><br><br>
+					<input type="text" name="email" placeholder="Email" /><br><br>
+					<input type="submit" name="submit" value="Submit" />
+				</form>
+			</center>
+		</div>
+	    <div class="footer">
+	    	<div class="lfloat">&copy; VJTI, Matunga</div>
+	    	<div class="rfloat">Made in India</div>
+	    </div>		
+		<!--wrapper ends here-->
+	</div>
 </body>
 </html>

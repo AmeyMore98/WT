@@ -1,3 +1,8 @@
+<html>
+<head>
+	<script type="text/javascript" src="pay-validation.js"></script>
+</head>
+<body onload="document.payment.hname.focus();">
 <h2>Review Order</h2>
 <table width="100%">
 	<tr>
@@ -13,49 +18,50 @@
 				</font>
 		</td>
 		<td>
-			<STRONG>Payment Method</STRONG><br>
+			<STRONG>Payment Method: Credit Card</STRONG><br>
 			<font face="Calibri Light">
-			<input type="radio" value="cod"> COD<br>
-			<input type="radio" value="Credit Card" checked> Credit Card<br>
-			We’ll save this card for your convenience.<br>
-			<input type="text" placeholder="Name on Card"><br><input type="Number" placeholder="Card Number"><br>
-  			<input type="radio" value="Net Banking">Net Banking<br>
+			We’ll save this card for your convenience.<br><br>
+			<form name="payment" onsubmit="return validPay();">
+			<input type="text" name="hname" placeholder="Name on Card"><br><br>
+			<input type="text" name="cardno" placeholder="Card Number"><br>
 			</font>
 		</td>
 		<td>
-			<button>Place your order</button><br><br>
+			<input type="Submit" value="Place your order"><br><br></form>
 			<font size="4"><STRONG>Order Summary</STRONG></font>
 			<font face="Calibri Light">
-			<table width="100%">
-				<tr>
-					<td>
-						Items:
-					</td>
-					<td>
-						Rs. 100
-					</td>
-				</tr>
-				<tr>
-					<td>
-						Delivery:
-					</td>
-					<td>
-						Rs. 50
-					</td>
-				</tr>
-				<tr>
-					<td colspan="2"><hr></td>
-				</tr>
-				<tr>
-					<td>
-						Order Total:
-					</td>
-					<td>
-						Rs. 150
-					</td>
-				</tr>
-			</table>
+				<table width="100%">
+					<tr>
+						<td>
+							Items:
+						</td>
+						<td>
+							Rs. 200
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Delivery:
+						</td>
+						<td>
+							Rs. 50
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2"><hr></td>
+					</tr>
+					<tr>
+						<td>
+							Order Total:
+						</td>
+						<td>
+							Rs. 250
+						</td>
+					</tr>
+				</table>
 			</font>
 		</td>
 	</tr>
 </table>
+</body>
+</html>
