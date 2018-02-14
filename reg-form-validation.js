@@ -1,7 +1,7 @@
 function formValidation()
 {
 
-var passid = document.registration.passid;
+var passid = document.registration.pass;
 var uname = document.registration.username;
 var uemail = document.registration.email;
 {
@@ -11,7 +11,7 @@ if(passid_validation(passid,7,12))
 {
 if(ValidateEmail(uemail))
 {
-alert('Form Succesfully Submitted');
+alert('Registraion Successful');
 window.location.reload()
 return true;
 } 
