@@ -1,9 +1,47 @@
 <html>
-<head></head>
-<body>
-<center><h3>Login</h3>
-<input id="email" placeholder="Enter Email"><br><br>
-<input id="password" placeholder="Enter Password"><br><br>
-<input type="Submit" value="Login"></center>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width-device-width, intial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+		<script type="text/javascript" src="login-form-validation.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>E-Book Store</title>
+	</head>
+<body onload="document.registration.email.focus();">
+	 <!--Navigation-->
+		<div class="header">
+			Suyogon
+		</div>
+		<nav class="main-nav">
+			<ul>
+				<li><a href="index.html" >Home</a></li>
+				<li><a href="cat.php" >Catalog</a></li>
+				<li><a href="profile.php" >Profile</a></li>
+				<li><a href="cart.php" >Cart</a></li>
+				<li><a href="login.html" >Login</a></li>
+				<li><a href="reg.html" >Register</a></li>
+				<li><a href="logout.php">Logout</a></li>
+			</ul>
+		</nav>
+	    <div class="content">
+			<center>
+				<i class="fas fa-sign-in-alt fa-4x"></i>
+				<h1>Login</h1>
+				<form name="registration" onsubmit="return formValidation();" method="post" action="login.php">
+					<input name="email" placeholder="Enter Email"><br><br>
+					<input name="pass" type="password" placeholder="Enter Password"><br><br>
+					<input type="Submit" class="btn" value="Login">
+				</form>
+			</center>	
+		</div>
+	       
+	  <footer class="footer">
+	    	<div class="lfloat">&copy; VJTI, Matunga</div>
+	    	<div class="rfloat">Made in India</div>
+	    </footer>
 </body>
 </html>
+
+
+	

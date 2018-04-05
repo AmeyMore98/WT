@@ -1,0 +1,140 @@
+:root {
+  --primary: #ddd;
+  --dark: #333;
+  --light: #fff;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+html {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+  height: 98%;
+}
+
+body {
+  min-height: 100%;
+  line-height: 1.4;
+  display: grid;
+  grid-template-rows: 150px auto 1fr;
+  grid-gap: 10px;
+}
+
+.header {
+  background: #e40046;
+  padding: 1.3rem 1.3rem;
+  font-size: 5.1rem;
+  color: var(--light);
+  box-shadow: var(--shadow);
+}
+
+.btn {
+  background: var(--dark);
+  color: var(--light);
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border: 0;
+}
+
+.main-nav ul {
+  display: grid;
+  grid-gap: 10px;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: 1fr;
+}
+
+.main-nav a {
+  background: var(--dark);
+  display: block;
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+  color: var(--light);
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  box-shadow: var(--shadow);
+}
+
+.main-nav a:hover {
+  background: var(--primary);
+  color: var(--dark);
+}
+
+.content-book {
+  display: grid;
+  grid-template-areas: 
+    "image"
+    "description"
+    "details"
+}
+
+.dimg {
+  grid-column: 1 / 2;
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 20px;
+  grid-area: image;
+}
+
+.product-desc {
+  grid-column: 2 / 4;
+  grid-area: description;
+}
+
+.product-details {
+  grid-column: 1 / 4;
+  grid-area: details;
+}
+
+.boxes {
+  display: grid;
+  grid-gap: 100px;
+  grid-template-columns: 2fr;
+}
+
+.box {
+  /*background: var(--dark);*/
+  text-align: center;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+}
+
+.box a {
+  text-decoration: none;
+  color: var(--dark);
+}
+
+.footer {
+   grid-row-start: 4;
+   padding: 20px;
+   background-color: #F8F8FF;
+   color: #666666;
+   box-shadow: var(--shadow);
+}
+
+.footer .lfloat {
+  float: left;
+}
+
+.footer .rfloat {
+  float: right;
+}
+
+/* media queries */
+@media (min-width: 800px){
+  .main-nav ul {
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .boxes {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .content-book {
+    grid-template-areas: 
+      "image description description"
+      "details details ."
+    }
+}

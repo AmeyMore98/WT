@@ -27,6 +27,12 @@
 			</ul>
 		</nav>
 	    <div class="content-book">
+<<<<<<< HEAD
+=======
+	    	
+			
+		 
+>>>>>>> f32cc267c0fa27bfc06a24257598fc1866cfe4e0
 			<?php 
 				$is_num = $_GET['num'];
 				$sql = mysqli_query($db, "SELECT title, author, price as mrp, price - price*discount/100 as dPrice, link, image, isbn FROM book where isbn = '" . $is_num . "'");
