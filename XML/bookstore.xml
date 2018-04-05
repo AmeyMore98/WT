@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="bookstore.xsl"?>
+<!DOCTYPE bookstore SYSTEM "D:\WebDev\WT\XML">
+<bookstore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="bookstore.xsd">
+	<book>
+		<title>1984</title>
+		<author>george orwell</author>
+		<isbn>080979</isbn>
+		<publisher>McGraw-Hill</publisher>
+		<edition>First</edition>
+		<price>150</price>
+	</book>
+	<book>
+		<title>Animal Farm</title>
+		<author>george orwell</author>
+		<isbn>080980</isbn>
+		<publisher>Communist Republic</publisher>
+		<edition>First</edition>
+		<price>100</price>
+	</book>
+</bookstore>

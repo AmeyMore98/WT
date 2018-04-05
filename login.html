@@ -16,20 +16,21 @@
 		<nav class="main-nav">
 			<ul>
 				<li><a href="index.html" >Home</a></li>
-				<li><a href="cat.html" >Catalog</a></li>
-				<li><a href="profile.html" >Profile</a></li>
-				<li><a href="cart.html" >Cart</a></li>
+				<li><a href="cat.php" >Catalog</a></li>
+				<li><a href="profile.php" >Profile</a></li>
+				<li><a href="cart.php" >Cart</a></li>
 				<li><a href="login.html" >Login</a></li>
 				<li><a href="reg.html" >Register</a></li>
+				<li><a href="logout.php">Logout</a></li>
 			</ul>
 		</nav>
 	    <div class="content">
 			<center>
 				<i class="fas fa-sign-in-alt fa-4x"></i>
 				<h1>Login</h1>
-				<form name="registration" onsubmit="return formValidation();">
-					<input id="email" placeholder="Enter Email"><br><br>
-					<input id="password" type="password" placeholder="Enter Password"><br><br>
+				<form name="registration" onsubmit="return formValidation();" method="post" action="login.php">
+					<input name="email" placeholder="Enter Email"><br><br>
+					<input name="pass" type="password" placeholder="Enter Password"><br><br>
 					<input type="Submit" class="btn" value="Login">
 				</form>
 			</center>	
