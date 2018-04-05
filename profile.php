@@ -1,3 +1,6 @@
+<?php
+	include('session.php')
+?>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -55,7 +58,7 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<title>E-Book Store</title>
 		<style type="text/css">
-			.content {
+			.content-sub {
 				display: grid;
 				grid-template-columns: repeat(3, 1fr);
 			}
@@ -86,23 +89,26 @@
 		<nav class="main-nav">
 			<ul>
 				<li><a href="index.html" >Home</a></li>
-				<li><a href="cat.html" >Catalog</a></li>
-				<li><a href="profile.html" >Profile</a></li>
-				<li><a href="cart.html" >Cart</a></li>
+				<li><a href="cat.php" >Catalog</a></li>
+				<li><a href="profile.php" >Profile</a></li>
+				<li><a href="cart.php" >Cart</a></li>
 				<li><a href="login.html" >Login</a></li>
 				<li><a href="reg.html" >Register</a></li>
+				<li><a href="logout.php">Logout</a></li>
 			</ul>
 		</nav>
 		<div class="content">
+			<div class="content-sub">
 	    	<div class="profile">
 	    			<div class="box1"><h2>User Security</h2></div>
     				<div class="box2"><p>(Click to Edit)</p></div>
-					<div class="box3-1">Name: </div><div class="box3-2"><b>Suyog Arde</b><br></div>
-					<div class="box4-1">E-mail: </div><div class="box4-2"><b>suyog.arde@gmail.com</b><br></div>
-					<div class="box5-1">Password: </div><div class="box5-2"><b>suyogisbrilliant</b></div>
+					<div class="box3-1">Name: </div><div class="box3-2"><b><?php echo $login_user; ?></b><br></div>
+					<div class="box4-1">E-mail: </div><div class="box4-2"><b><?php echo $login_email; ?></b><br></div>
+					<div class="box5-1">Password: </div><div class="box5-2"><b><?php echo $login_pass; ?></b></div>
 					<div class="box6" style="text-align: center;">
-	    		    <a href="cart.html" style="text-decoration: none; color: #fff;"><button class="btn">My Cart</button></a>
+	    		    <a href="cart.php" style="text-decoration: none; color: #fff;"><button class="btn">My Cart</button></a>
 	    			</div>
+	    	</div>
 	    	</div>
 		</div>		
 	  <footer class="footer">

@@ -11,8 +11,6 @@ if(passid_validation(passid,7,12))
 {
 if(ValidateEmail(uemail))
 {
-alert('Registraion Successful');
-window.location.reload()
 return true;
 } 
 } 

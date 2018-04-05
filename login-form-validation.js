@@ -7,8 +7,6 @@ if(ValidateEmail(uemail))
 {
 if(passid_validation(passid,7,12))
 {
-alert('Login Successful');
-window.location.reload()
 return true;
 } 
 } 
